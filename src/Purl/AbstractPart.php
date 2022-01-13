@@ -111,7 +111,7 @@ abstract class AbstractPart implements ArrayAccess
     /**
      * @param mixed $value
      */
-    public function __set(string $key, $value): AbstractPart
+    public function __set(string $key, $value): void
     {
         return $this->set($key, $value);
     }
@@ -144,20 +144,16 @@ abstract class AbstractPart implements ArrayAccess
     /**
      * @param mixed $key
      * @param mixed $value
-     *
-     * @return void
      */
-    public function offsetSet($key, $value)
+    public function offsetSet($key, $value): void
     {
         $this->set($key, $value);
     }
 
     /**
      * @param mixed $key
-     *
-     * @return void
      */
-    public function offsetUnset($key)
+    public function offsetUnset($key): void
     {
         $this->remove($key);
     }
