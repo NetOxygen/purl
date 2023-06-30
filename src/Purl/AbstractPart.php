@@ -136,7 +136,7 @@ abstract class AbstractPart implements ArrayAccess
      *
      * @return mixed
      */
-    public function offsetGet($key)
+    public function offsetGet($key): mixed
     {
         return $this->get($key);
     }
